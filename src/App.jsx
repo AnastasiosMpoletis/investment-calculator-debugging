@@ -16,7 +16,12 @@ function App() {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        // In Developer Tools, if variable = "1000" -> String. If variable = 1000 -> Number.
+        /**
+           * !!!!!Input fields values are always extracted as strings!!!!!
+           * By adding the '+' character below, we convert the input to a number so that the calculation is properly done.
+           */
+        [inputIdentifier]: +newValue,
       };
     });
   }
