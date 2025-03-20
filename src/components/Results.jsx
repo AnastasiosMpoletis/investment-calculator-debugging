@@ -1,5 +1,7 @@
 import { calculateInvestmentResults, formatter } from '../util/investment.js';
 
+// Move it here to reproduce StrictMode bug
+// const results = [];
 
 export default function Results({ input }) {
   const results = [];
